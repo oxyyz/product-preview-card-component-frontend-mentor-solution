@@ -1,0 +1,148 @@
+@import '_variables.scss';
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    background-color: $white;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &-side {
+        width: 50%;
+        height: 450px;
+    }
+
+    &__image {
+        background-image: url(./../images/image-product-desktop.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__content {
+        padding: 32px;
+
+        &_category {
+            color: $dark-grayish-blue;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+        }
+
+        &_name {
+            color: $very-dark-blue;
+            font-family: $fraunces;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 32px;
+            margin-bottom: 24px;
+        }
+
+        &_desc {
+            color: $dark-grayish-blue;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 23px;
+            margin-bottom: 29px;
+        }
+
+        &_pricebox {
+            display: flex;
+            align-items: center;
+            gap: 19px;
+            margin-bottom: 30px;
+
+            &_actual {
+                color: $dark-cyan;
+                font-family: $fraunces;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 32px;
+            }
+
+            &_old {
+                color: $dark-grayish-blue;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 23px;
+                text-decoration: line-through;
+            }
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 11.615px;
+        border-radius: 8px;
+        background: $dark-cyan;
+
+        color: $white;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: $deep-aquamarine-hover;
+        }
+    }
+}
+
+@media screen and (max-width: 498px) {
+    .card {
+        flex-direction: column;
+        max-width: 343.697px;
+
+        &-side {
+            width: 100%;
+            height: auto;
+        }
+
+        &__image {
+            height: 240px;
+        }
+
+        &__content {
+            padding: 24px;
+
+            &_category {
+                margin-bottom: 12px;
+            }
+
+            &_name {
+                margin-bottom: 16px;
+            }
+
+            &_desc{
+                margin-bottom: 24px;
+            }
+
+            &_pricebox {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
